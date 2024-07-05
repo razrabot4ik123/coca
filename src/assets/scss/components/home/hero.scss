@@ -7,7 +7,7 @@
   }
 
   @include mobile {
-    min-height: calc(100dvh - 128px);
+    padding: 60px 0;
   }
 
   @include small-mobile {
