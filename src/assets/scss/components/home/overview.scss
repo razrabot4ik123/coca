@@ -37,7 +37,7 @@
   &__list {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: 0.377fr 0.381fr;
+    grid-template-columns: 0.377fr 0.406fr;
     row-gap: 56px;
 
     @include tablet {

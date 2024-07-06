@@ -1,0 +1,199 @@
+.features {
+  padding: 160px 0 94px;
+
+  @include mini-desktop {
+    padding-top: 100px;
+  }
+
+  @include mobile {
+    padding: 60px 0;
+  }
+
+  &__container {
+    @include flex-justify-between-align-center;
+
+    @include mini-desktop {
+      gap: 40px;
+      flex-direction: column;
+    }
+
+    @include mobile {
+      gap: 25px;
+    }
+  }
+
+  &__left {
+    position: relative;
+  }
+
+  &__stats {
+    position: absolute;
+    right: 36px;
+    bottom: 40px;
+    padding: 18px;
+    max-width: 290px;
+    background-color: #fff;
+
+    @include mobile {
+      right: 16px;
+      bottom: 20px;
+    }
+
+    @include small-mobile {
+      right: 8px;
+      bottom: 10px;
+      padding: 14px;
+      max-width: 240px;
+    }
+
+    &-head {
+      @include flex-justify-between-align-center;
+      margin-bottom: 19px;
+    }
+
+    &-title {
+      font-weight: 600;
+      line-height: 1.5;
+      color: #1d1e25;
+    }
+
+    &-item {
+      @include flex-align-center;
+      gap: 26px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #ededed;
+        padding-bottom: 23px;
+      }
+
+      &:last-child {
+        padding-top: 20px;
+      }
+
+      &-img {
+        @include small-mobile {
+          width: 65px;
+        }
+      }
+
+      &-title {
+        margin-bottom: 6px;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 1.5;
+        color: #7e8492;
+      }
+
+      &-price {
+        @include flex-justify-between-align-center;
+        margin-bottom: 9px;
+
+        &-num {
+          font-weight: 700;
+          font-size: 23px;
+          line-height: 1.2;
+          color: #1d1e25;
+
+          @include mobile {
+            font-size: 20px;
+          }
+        }
+
+        &-proc {
+          @include flex-align-center;
+          gap: 5px;
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 1.5;
+          color: #1d1e25;
+        }
+      }
+
+      &-descr {
+        font-weight: 400;
+        font-size: 8px;
+        color: #7e8492;
+      }
+    }
+  }
+
+  &__right {
+    max-width: 557px;
+
+    @include mini-desktop {
+      max-width: 800px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include mini-desktop {
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 40px;
+    max-width: 360px;
+    font-weight: 500;
+    line-height: 1.78;
+    color: #7e8492;
+
+    @include mini-desktop {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    @include small-mobile {
+        margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    @include flex-column;
+    gap: 32px;
+
+    @include mobile {
+      gap: 22px;
+    }
+  }
+
+  &__item {
+    @include flex-align-center;
+    gap: 18px;
+    max-width: 393px;
+    font-weight: 500;
+    line-height: 1.78;
+    color: var(--neutral-color-100);
+
+    @include mini-desktop {
+      align-self: center;
+      max-width: 500px;
+    }
+
+    @include small-tablet {
+      align-self: flex-start;
+      max-width: 100%;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: url('../icons/features-tick-icon.svg');
+    }
+  }
+}
