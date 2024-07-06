@@ -29,7 +29,7 @@
   @include mini-desktop {
     --container-width: 1000px;
   }
-  
+
   @include tablet {
     --container-width: 800px;
   }
@@ -62,7 +62,6 @@
   --logo-color-text: #fff;
   --logo-color-circle: #343542;
 
-  
   // overview colors
   --overview-bg-color: #18181d;
 }
