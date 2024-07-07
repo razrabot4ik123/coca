@@ -20,7 +20,9 @@ export const useHeader = () => {
 
     if (newPageYOffset < header.offsetHeight) {
       header.classList.add('header--show');
-      header.classList.add('header--background-transparent');
+      if (newPageYOffset < header.offsetHeight / 2) {
+        header.classList.add('header--background-transparent');
+      }
     }
 
     if (newPageYOffset < lastPageYOffset) {
