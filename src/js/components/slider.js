@@ -19,7 +19,6 @@ export const usePartnersSlider = () => {
       centeredSlides: true,
       autoplay: {
         delay: 3000,
-        pauseOnMouseEnter: true,
         disableOnInteraction: false,
       },
 
