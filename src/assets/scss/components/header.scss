@@ -1,5 +1,32 @@
 .header {
   padding: 26px 0 22px;
+  background-color: var(--neutral-color-10);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%);
+  transition:
+    visibility 0.2s,
+    opacity 0.2s,
+    transform 0.2s,
+    background-color 0.2s;
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: var(--z-index-3);
+  }
+
+  &--show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &--background-transparent {
+    background-color: transparent;
+  }
 
   @include mobile {
     padding: 22px 0 18px;
@@ -10,7 +37,6 @@
   }
 
   &__logo {
-    position: relative;
     z-index: var(--z-index-4);
 
     & svg {
@@ -90,7 +116,7 @@
 
     &-text {
       position: absolute;
-      top: -22px;
+      top: -24px;
       left: 50%;
       font-weight: 600;
       line-height: 1.5;
