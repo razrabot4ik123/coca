@@ -136,7 +136,7 @@
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
 
-    @include mini-desktop {
+    @include small-tablet {
       text-align: center;
     }
 
@@ -153,9 +153,12 @@
     color: #7e8492;
 
     @include mini-desktop {
+      max-width: 600px;
+    }
+
+    @include small-tablet {
       margin-right: auto;
       margin-left: auto;
-      max-width: 600px;
       text-align: center;
     }
 
@@ -182,7 +185,6 @@
     color: var(--neutral-color-100);
 
     @include mini-desktop {
-      align-self: center;
       max-width: 500px;
     }
 
