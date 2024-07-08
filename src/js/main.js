@@ -5,7 +5,7 @@ import '../assets/scss/main.scss';
 import { useTheme } from './components/theme.js';
 import { useBurger } from './components/burger.js';
 import { useHeader } from './components/header.js';
-import { usePartnersSlider } from './components/slider.js';
+import { usePartnersSlider } from './components/home/partners-slider.js';
 
 useTheme();
 useBurger();
