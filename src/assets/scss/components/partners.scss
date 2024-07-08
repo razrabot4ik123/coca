@@ -37,7 +37,12 @@
   }
 
   &__slider {
-    width: 100%;
+    margin-right: none;
+    margin-left: none;
+
+    @include small-tablet {
+      width: 100%;
+    }
   }
 
   &__list {

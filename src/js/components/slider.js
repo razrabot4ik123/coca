@@ -25,15 +25,15 @@ export const usePartnersSlider = () => {
       spaceBetween: 15,
       centeredSlides: true,
       autoplay: {
-        delay: 3000,
+        delay: 2000,
         disableOnInteraction: false,
       },
       breakpoints: {
-        650: {
+        651: {
           slidesPerView: 3,
           spaceBetween: 30,
         },
-        450: {
+        451: {
           slidesPerView: 2,
           spaceBetween: 30,
         },
@@ -50,4 +50,18 @@ export const usePartnersSlider = () => {
 
   window.addEventListener('resize', checkWidth);
   checkWidth();
+};
+
+export const useInsightSlider = () => {
+  new Swiper('.insight__slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 32,
+    loop: true,
+    centeredSlides: true,
+    breakpoints: {
+      1201: {
+        centeredSlides: false,
+      },
+    },
+  });
 };
