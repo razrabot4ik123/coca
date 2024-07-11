@@ -86,6 +86,9 @@ export const useTestimonialsSlider = () => {
     spaceBetween: 24,
     loop: true,
     effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
     navigation: {
       nextEl: '.testimonials__btn--next',
       prevEl: '.testimonials__btn--prev',
