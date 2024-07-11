@@ -39,18 +39,9 @@
   }
 
   &__article {
-    max-width: 582px;
-
-    @include mini-desktop {
-      max-width: 482px;
-    }
-
-    @include mobile {
-      max-width: 400px;
-    }
-
     &-img {
       margin-bottom: 16px;
+      width: 100%;
     }
 
     &-head {
