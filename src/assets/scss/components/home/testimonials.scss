@@ -78,6 +78,10 @@
   &__slider {
     margin-bottom: 16px;
     max-width: 898px;
+
+    @include small-mobile {
+      margin-bottom: 5px;
+    }
   }
 
   &__comment {
