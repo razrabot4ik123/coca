@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 
 export const usePartnersSlider = () => {
   let partnersSlider = null;
@@ -31,7 +31,6 @@ export const usePartnersSlider = () => {
       breakpoints: {
         651: {
           slidesPerView: 3,
-          spaceBetween: 30,
         },
         451: {
           slidesPerView: 2,
@@ -54,7 +53,7 @@ export const usePartnersSlider = () => {
 
 export const useInsightSlider = () => {
   new Swiper('.insight__slider', {
-    slidesPerView: 'auto',
+    slidesPerView: 1,
     spaceBetween: 32,
     loop: true,
     centeredSlides: true,
@@ -62,6 +61,22 @@ export const useInsightSlider = () => {
       1201: {
         centeredSlides: false,
       },
+      401: {
+        slidesPerView: 'auto',
+      }
+    },
+  });
+};
+
+export const useTestimonialsSlider = () => {
+  new Swiper('.testimonials__slider', {
+    modules: [Navigation],
+    spaceBetween: 24,
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+      prevEl: '.testimonials__btn--prev',
+      nextEl: '.testimonials__btn--next',
     },
   });
 };

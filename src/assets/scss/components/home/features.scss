@@ -81,7 +81,7 @@
         font-weight: 500;
         font-size: 10px;
         line-height: 1.5;
-        color: #7e8492;
+        color: var(--neutral-color-150);
       }
 
       &-price {
@@ -112,10 +112,10 @@
       &-descr {
         font-weight: 400;
         font-size: 8px;
-        color: #7e8492;
+        color: var(--neutral-color-150);
 
         &-span {
-            font-weight: 700;
+          font-weight: 700;
         }
       }
     }
@@ -150,7 +150,7 @@
     max-width: 360px;
     font-weight: 500;
     line-height: 1.78;
-    color: #7e8492;
+    color: var(--neutral-color-150);
 
     @include mini-desktop {
       max-width: 600px;
@@ -163,7 +163,7 @@
     }
 
     @include small-mobile {
-        margin-bottom: 20px;
+      margin-bottom: 20px;
     }
   }
 

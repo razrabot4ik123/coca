@@ -37,8 +37,8 @@
   }
 
   &__slider {
-    margin-right: none;
-    margin-left: none;
+    margin-right: 0;
+    margin-left: 0;
 
     @include small-tablet {
       width: 100%;

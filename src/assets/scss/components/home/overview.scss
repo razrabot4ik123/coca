@@ -23,7 +23,7 @@
     max-width: 660px;
     font-weight: 500;
     line-height: 1.5;
-    color: #7e8492;
+    color: var(--neutral-color-150);
 
     @include tablet {
       margin-bottom: 60px;
@@ -88,7 +88,7 @@
     &-descr {
       font-weight: 500;
       line-height: 1.62;
-      color: #7e8492;
+      color: var(--neutral-color-150);
     }
   }
 
