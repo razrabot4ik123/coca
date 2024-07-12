@@ -1,0 +1,270 @@
+.footer {
+  padding: 112px 0 58px;
+  color: #fff;
+  background-color: var(--black-bg-color);
+
+  @include mobile {
+    padding-top: 62px;
+  }
+
+  &__head {
+    @include flex-justify-between-align-center;
+    margin-bottom: 134px;
+
+    @include tablet {
+      gap: 40px;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 64px;
+    }
+
+    @include mobile {
+      align-items: center;
+      margin-bottom: 44px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.2;
+
+    @include tablet {
+      font-size: 54px;
+    }
+
+    @include mobile {
+      margin-bottom: 14px;
+      font-size: 42px;
+    }
+  }
+
+  &__descr {
+    max-width: 543px;
+    font-weight: 500;
+    line-height: 1.78;
+    color: var(--neutral-color-50);
+  }
+
+  &__link {
+    padding: 16px 44px;
+    color: #1d1e25;
+    background-color: #fff;
+  }
+
+  &__body {
+    @include flex-justify-between;
+    margin-bottom: 56px;
+
+    @include tablet {
+      gap: 40px;
+      flex-direction: column;
+    }
+
+    @include mobile {
+      flex-direction: column-reverse;
+    }
+
+    &-info {
+      @include tablet {
+        @include flex-align-center;
+        gap: 30px;
+      }
+
+      @include small-tablet {
+        gap: 0;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    &-descr {
+      max-width: 292px;
+      font-weight: 500;
+      line-height: 1.62;
+      color: var(--neutral-color-150);
+
+      @include tablet {
+        max-width: 500px;
+      }
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 4px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav {
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 93px;
+
+    @include small-desktop {
+      gap: 73px;
+    }
+
+    @include mini-desktop {
+      gap: 43px;
+    }
+
+    @include tablet {
+      justify-content: space-between;
+    }
+
+    @include small-tablet {
+      gap: 23px;
+      font-size: 15px;
+    }
+  }
+
+  &__item {
+    &-title {
+      margin-bottom: 24px;
+      font-weight: 700;
+      line-height: 1.5;
+      color: #fff;
+    }
+  }
+
+  &__subitem {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &-link {
+      position: relative;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--neutral-color-150);
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -3px;
+        left: 0;
+        height: 1px;
+        background-color: var(--neutral-color-150);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity var(--transition),
+          visibility var(--transition);
+      }
+
+      &:hover {
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    @include flex-justify-between-align-center;
+    border-top: 1px solid var(--neutral-color-70);
+    padding-top: 40px;
+
+    @include tablet {
+      gap: 20px;
+      flex-direction: column;
+    }
+
+    &-lists {
+      @include flex-align-center;
+      gap: 72px;
+
+      @include tablet {
+        gap: 42px;
+      }
+
+      @include mobile {
+        gap: 20px;
+        flex-direction: column;
+      }
+    }
+
+    &-list {
+      display: flex;
+      gap: 40px;
+
+      @include tablet {
+        gap: 20px;
+      }
+
+      @include small-mobile {
+        gap: 10px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    &-link {
+      position: relative;
+      font-weight: 500;
+      line-height: 1.43;
+      color: #fff;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -3px;
+        left: 0;
+        height: 1px;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity var(--transition),
+          visibility var(--transition);
+      }
+
+      &:hover {
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__social {
+    &-list {
+      @include flex-align-center;
+      gap: 24px;
+
+      @include tablet {
+        gap: 18px;
+      }
+    }
+
+    &-link {
+      @include flex-all-center;
+      transition: transform var(--transition);
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__copyright {
+    font-weight: 500;
+    line-height: 1.43;
+    color: #fff;
+  }
+}
