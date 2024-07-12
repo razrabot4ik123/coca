@@ -12,6 +12,7 @@ import {
   useInsightSlider,
   useTestimonialsSlider,
 } from './components/home/slider.js';
+import { useAccordionFooter } from './components/footer.js';
 
 useTheme();
 useBurger();
@@ -19,3 +20,4 @@ useHeader();
 usePartnersSlider();
 useInsightSlider();
 useTestimonialsSlider();
+useAccordionFooter();
