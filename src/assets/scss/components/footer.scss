@@ -149,6 +149,11 @@
       .footer__sublist {
         margin: 20px 0;
       }
+
+      /* stylelint-disable-next-line selector-class-pattern */
+      .footer__control-icon {
+        transform: rotate(180deg);
+      }
     }
 
     &-title {
@@ -166,6 +171,11 @@
   &__control {
     pointer-events: none;
 
+    /* stylelint-disable-next-line selector-class-pattern */
+    &:hover .footer__control-icon {
+      transform: rotate(90deg);
+    }
+
     @include mobile {
       @include flex-justify-between;
       padding: 24px 15px;
@@ -175,6 +185,7 @@
 
     &-icon {
       display: none;
+      transition: var(--transition);
 
       @include mobile {
         @include flex-all-center;
