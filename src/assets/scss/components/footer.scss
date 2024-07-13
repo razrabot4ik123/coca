@@ -183,6 +183,7 @@
       pointer-events: all;
     }
 
+    /* stylelint-disable-next-line no-descending-specificity */
     &-icon {
       display: none;
       transition: var(--transition);
