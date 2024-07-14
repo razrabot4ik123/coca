@@ -1,0 +1,114 @@
+.faq {
+  padding: 82px 0 160px;
+  text-align: center;
+
+  @include mobile {
+    padding: 42px 0 80px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 80px;
+    font-weight: 500;
+    line-height: 1.78;
+    color: var(--neutral-color-150);
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__list {
+    @include flex-column;
+    gap: 56px;
+    align-items: center;
+    text-align: start;
+
+    @include mobile {
+      gap: 36px;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid var(--neutral-color-30);
+    padding-bottom: 32px;
+    width: 100%;
+    max-width: 1114px;
+
+    @include mobile {
+      padding-bottom: 16px;
+    }
+
+    &--opened {
+      /* stylelint-disable-next-line selector-class-pattern */
+      .faq__content {
+        margin: 16px 0 -16px;
+
+        @include mobile {
+          margin: 8px 0 -8px;
+        }
+      }
+
+      /* stylelint-disable-next-line selector-class-pattern */
+      .faq__control-icon::after {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  &__control {
+    @include flex-justify-between-align-center;
+    gap: 15px;
+
+    &-title {
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--neutral-color-100);
+    }
+
+    &-icon {
+      @include flex-all-center;
+      position: relative;
+      width: 24px;
+      height: 24px;
+
+      /* stylelint-disable-next-line no-descending-specificity */
+      &::after {
+        transform: rotate(90deg);
+        transition: transform var(--transition);
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        border-radius: 8px;
+        width: 18px;
+        height: 3px;
+        background-color: var(--neutral-color-100);
+      }
+    }
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  &__content {
+    overflow: hidden;
+    max-width: 641px;
+    max-height: 0;
+    font-weight: 500;
+    line-height: 1.78;
+    color: var(--neutral-color-150);
+    transition: var(--transition);
+  }
+}
