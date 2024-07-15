@@ -11,6 +11,12 @@ export const useHeader = () => {
   }
   fixedHeader();
 
+  document.addEventListener('DOMContentLoaded', function checkScroll() {
+    if (window.pageYOffset > 0) {
+      header.classList.remove('header--background-transparent');
+    }
+  });
+
   let lastPageYOffset = window.pageYOffset;
 
   window.addEventListener('scroll', toggleHeader);

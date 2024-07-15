@@ -178,9 +178,14 @@
 
     @include mobile {
       @include flex-justify-between;
+      border-radius: 10px;
       padding: 24px 15px;
-      background-color: #101010;
+      background-color: var(--black-bg-color-reverse);
       pointer-events: all;
+    }
+
+    @include small-mobile {
+      border-radius: 0;
     }
 
     /* stylelint-disable-next-line no-descending-specificity */
