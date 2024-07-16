@@ -9,7 +9,7 @@ export const usePriceSwitcher = () => {
   const numEnterprisePrice = enterprisePrice.textContent.replace(/[^0-9.]/g, '');
 
   const calculateDiscountedPrice = (price) => {
-    const noneDiscountedPrice = price - (price * 20) / 100;
+    const noneDiscountedPrice = price + (price * 20) / 100;
     return Math.trunc(noneDiscountedPrice / 30);
   };
 
