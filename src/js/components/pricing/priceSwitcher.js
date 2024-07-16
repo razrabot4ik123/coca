@@ -4,22 +4,35 @@ export const usePriceSwitcher = () => {
   const popularPrice = document.querySelector('[data-price="popular"]');
   const enterprisePrice = document.querySelector('[data-price="enterprise"]');
 
+  const numStarterPrice = starterPrice.textContent.replace(/[^0-9.]/g, '');
+  const numPopularPrice = popularPrice.textContent.replace(/[^0-9.]/g, '');
+  const numEnterprisePrice = enterprisePrice.textContent.replace(/[^0-9.]/g, '');
+
+  const calculateDiscountedPrice = (price) => {
+    const noneDiscountedPrice = price - (price * 30) / 100;
+    return Math.trunc(noneDiscountedPrice / 30);
+  };
+
+  const starterNoneDiscountedPrice = calculateDiscountedPrice(numStarterPrice);
+  const popularNoneDiscountedPrice = calculateDiscountedPrice(numPopularPrice);
+  const enterpriseNoneDiscountedPrice = calculateDiscountedPrice(numEnterprisePrice);
+
   const priceList = {
     starter: {
-      default: 120,
-      withSale: 100,
+      default: '$' + starterNoneDiscountedPrice,
+      withSale: '$' + numStarterPrice,
     },
     popular: {
-      default: 1680,
-      withSale: 1400,
+      default: '$' + popularNoneDiscountedPrice,
+      withSale: '$' + numPopularPrice,
     },
     enterprise: {
-      default: 2520,
-      withSale: 2100,
+      default: '$' + enterpriseNoneDiscountedPrice,
+      withSale: '$' + numEnterprisePrice,
     },
   };
 
-  const setPricesWitchSale = () => {
+  const setPricesWithSale = () => {
     starterPrice.textContent = priceList.starter.withSale;
     popularPrice.textContent = priceList.popular.withSale;
     enterprisePrice.textContent = priceList.enterprise.withSale;
@@ -32,13 +45,21 @@ export const usePriceSwitcher = () => {
   };
 
   switcher.checked = true;
-  setPricesWitchSale();
+  setPricesWithSale();
+
+  const timeInterval = document.querySelectorAll('[data-price="mo"]');
 
   switcher.addEventListener('click', () => {
     if (switcher.checked) {
-      setPricesWitchSale();
+      setPricesWithSale();
+      timeInterval.forEach((e) => {
+        e.textContent = '/mo';
+      });
     } else {
       setDefaultPrices();
+      timeInterval.forEach((e) => {
+        e.textContent = '/day';
+      });
     }
   });
 };
