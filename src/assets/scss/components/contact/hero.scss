@@ -1,5 +1,9 @@
 .hero {
-  padding: 90px 0 85px;
+  padding: 90px 0 38px;
+
+  @include mobile {
+    padding: 30px 0 12px;
+  }
 
   &__title {
     margin-bottom: 82px;
@@ -8,20 +12,70 @@
     line-height: 1.2;
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
+
+    @include tablet {
+      margin-bottom: 52px;
+    }
+
+    @include mobile {
+      margin-bottom: 32px;
+    }
   }
 
   &__body {
     @include flex-justify-between-align-center;
+    gap: 83px;
+
+    @include tablet {
+      gap: 53px;
+      flex-direction: column;
+    }
+
+    @include mobile {
+      gap: 33px;
+    }
   }
 
   &__map {
-    width: 987px;
+    width: 100%;
     height: 545px;
-    background-color: #000;
+
+    @include tablet {
+      height: 445px;
+    }
+
+    @include small-tablet {
+      height: 345px;
+    }
+  }
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  .ymaps3x0--map-copyrights {
+    display: none;
+  }
+
+  .ymaps3x0--map-container,
+  .ymaps3x0--map {
+    width: 100% !important;
   }
 
   &__contacts {
     max-width: 176px;
+
+    @include tablet {
+      @include flex-justify-between;
+      gap: 40px;
+      max-width: 100%;
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    @include mobile {
+      gap: 20px;
+    }
 
     &-item {
       border-bottom: 1px solid var(--neutral-color-50);
@@ -29,6 +83,10 @@
 
       &:not(:last-child) {
         margin-bottom: 40px;
+
+        @include tablet {
+          margin-bottom: 0;
+        }
       }
 
       &-title {

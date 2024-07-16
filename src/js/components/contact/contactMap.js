@@ -6,7 +6,7 @@ export const useMap = () => {
 
     const map = new YMap(document.getElementById('map'), {
       location: {
-        center: [28, 28],
+        center: [60, 28],
         zoom: 2,
       },
     });

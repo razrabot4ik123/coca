@@ -7,11 +7,7 @@ import '../assets/scss/main.scss';
 import { useTheme } from './components/theme.js';
 import { useBurger } from './components/burger.js';
 import { useHeader } from './components/header.js';
-import {
-  usePartnersSlider,
-  useInsightSlider,
-  useTestimonialsSlider,
-} from './components/home/slider.js';
+import { usePartnersSlider, useInsightSlider, useTestimonialsSlider } from './components/slider.js';
 import { useAccordionFooter } from './components/footer.js';
 
 useTheme();
