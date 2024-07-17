@@ -60,8 +60,12 @@
     @include flex-align-center;
     gap: 111px;
 
+    @include mini-desktop {
+      gap: 80px;
+    }
+
     @include tablet {
-      gap: 60px;
+      gap: 40px;
     }
 
     @include small-tablet {
@@ -69,6 +73,7 @@
       top: 0;
       left: -100vw;
       z-index: var(--z-index-3);
+      gap: 80px;
       flex-direction: column;
       justify-content: center;
       width: 80dvw;
@@ -151,6 +156,10 @@
 
     @include small-tablet {
       flex-direction: column;
+    }
+
+    @include tablet {
+      gap: 22px;
     }
 
     @include mobile {
