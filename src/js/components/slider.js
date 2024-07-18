@@ -95,3 +95,31 @@ export const useTestimonialsSlider = () => {
     },
   });
 };
+
+export const useAboutHeroSlider = () => {
+  new Swiper('.hero__slider', {
+    slidesPerView: 1,
+    spaceBetween: 22,
+    loop: true,
+    freeMode: true,
+    centeredSlides: false,
+
+    breakpoints: {
+      993: {
+        slidesPerView: 2.3,
+        spaceBetween: 32,
+      },
+      769: {
+        slidesPerView: 2,
+        centeredSlides: false,
+      },
+      577: {
+        slidesPerView: 1.4,
+        centeredSlides: true,
+      },
+    },
+    381: {
+      slidesPerView: 1.2,
+    },
+  });
+};

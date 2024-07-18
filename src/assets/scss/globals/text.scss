@@ -83,7 +83,7 @@
 .text {
   &-p {
     &-subtitle {
-      @include flex-align-center;
+      display: flex;
       gap: 27px;
       font-weight: 600;
       font-size: 32px;
@@ -114,7 +114,7 @@
         height: 1px;
         max-width: 76px;
         background-color: var(--neutral-color-140);
-        transform: translateY(-40px);
+        transform: translateY(20px);
 
         @include small-tablet {
           display: none;

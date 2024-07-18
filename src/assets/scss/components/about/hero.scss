@@ -1,0 +1,143 @@
+.hero {
+  padding: 105px 0 160px;
+
+  @include mobile {
+    padding: 60px 0 80px;
+  }
+
+  @include small-mobile {
+    padding: 40px 0 60px;
+  }
+
+  &__title {
+    margin-bottom: 118px;
+    max-width: 959px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include tablet {
+      margin-bottom: 68px;
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 48px;
+    }
+
+    @include small-mobile {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__info {
+    @include flex-justify-between-align-center;
+    gap: 60px 30px;
+    flex-wrap: wrap;
+    margin-bottom: 135px;
+
+    @include mini-desktop {
+      justify-content: center;
+    }
+
+    @include tablet {
+      margin-bottom: 65px;
+    }
+
+    @include small-mobile {
+      gap: 40px;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__descr {
+    max-width: 780px;
+  }
+
+  &__link {
+    @include flex-all-center;
+    position: relative;
+    margin-right: 44px;
+    width: 127px;
+    height: 126px;
+    transition: transform var(--transition);
+
+    @include mini-desktop {
+      margin-right: 0;
+    }
+
+    @include small-mobile {
+      width: 107px;
+      height: 106px;
+    }
+
+    &-arrow {
+      @include small-mobile {
+        width: 40%;
+      }
+    }
+
+    &-text {
+      position: absolute;
+      inset: 0;
+      animation: rotate-text 10s linear infinite;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__item {
+    &-img {
+      margin-bottom: 24px;
+
+      @include tablet {
+        margin-bottom: 12px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 8px;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      color: var(--neutral-color-100);
+
+      @include tablet {
+        margin-bottom: 4px;
+      }
+    }
+
+    &-descr {
+      margin-bottom: 32px;
+      font-weight: 500;
+      line-height: 1.78;
+      color: var(--neutral-color-150);
+
+      @include tablet {
+        margin-bottom: 16px;
+      }
+    }
+
+    &-btn {
+      display: inline-block;
+      padding: 16px 32px;
+      font-weight: 700;
+      line-height: 1.5;
+      color: var(--neutral-color-10);
+      background-color: var(--neutral-color-100);
+    }
+  }
+}
+
+@keyframes rotate-text {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
