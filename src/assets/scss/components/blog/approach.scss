@@ -78,9 +78,7 @@
         height: 32px;
 
         & svg path {
-          transition:
-            opacity var(--transition),
-            fill var(--transition);
+          transition: opacity var(--transition);
 
           &:first-child {
             fill: var(--neutral-color-100);
@@ -93,8 +91,7 @@
 
         &:hover svg {
           path:first-child {
-            fill: var(--neutral-color-150);
-            opacity: 0.8;
+            opacity: 0.3;
           }
         }
       }
