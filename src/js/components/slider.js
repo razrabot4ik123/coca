@@ -101,7 +101,6 @@ export const useAboutHeroSlider = () => {
     slidesPerView: 1,
     spaceBetween: 22,
     loop: true,
-    freeMode: true,
     centeredSlides: false,
 
     breakpoints: {
