@@ -1,0 +1,15 @@
+.hero {
+  padding: 80px 0 48px;
+
+  &__container {
+    max-width: 940px;
+  }
+
+  &__title {
+    max-width: 970px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+  }
+}
