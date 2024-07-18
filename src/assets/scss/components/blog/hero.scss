@@ -1,15 +1,94 @@
 .hero {
-  padding: 80px 0 48px;
+  padding: 80px 0 56px;
+
+  @include mobile {
+    padding: 30px 0 36px;
+  }
+
+  @include small-mobile {
+    padding-top: 20px;
+  }
 
   &__container {
-    max-width: 940px;
+    max-width: calc(940px + var(--container-padding) * 2);
+
+    @include tablet {
+      max-width: var(--container-width);
+    }
   }
 
   &__title {
+    margin-bottom: 80px;
     max-width: 970px;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__head {
+    @include flex-justify-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 24px;
+
+    @include small-mobile {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__author {
+    @include flex-align-center;
+    gap: 24px;
+
+    @include small-mobile {
+      gap: 12px;
+    }
+
+    &-avatar {
+      overflow: hidden;
+      border-radius: 50%;
+    }
+
+    &-name {
+      display: inline-block;
+      margin-bottom: 4px;
+      font-weight: 600;
+      line-height: 1.44;
+      color: var(--neutral-color-100);
+    }
+
+    &-info {
+      font-weight: 500;
+      line-height: 1.62;
+      color: var(--neutral-color-150);
+    }
+  }
+
+  &__date {
+    display: flex;
+    gap: 9px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--neutral-color-150);
+  }
+
+  &__img {
+    margin-bottom: 80px;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    line-height: 1.78;
     color: var(--neutral-color-100);
   }
 }

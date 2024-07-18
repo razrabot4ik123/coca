@@ -1,0 +1,133 @@
+.approach {
+  padding-bottom: 160px;
+
+  @include mobile {
+    padding-bottom: 80px;
+  }
+
+  @include small-mobile {
+    padding-bottom: 60px;
+  }
+
+  &__container {
+    max-width: calc(940px + var(--container-padding) * 2);
+
+    @include tablet {
+      max-width: var(--container-width);
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 56px;
+    font-weight: 400;
+    line-height: 1.78;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__creator {
+    display: flex;
+    gap: 28px 48px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &-avatar {
+      max-height: 200px;
+    }
+
+    &-socials {
+      @include flex-align-center;
+      gap: 12px 24px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+      font-weight: 500;
+      font-style: normal;
+      line-height: 1.62;
+      color: var(--neutral-color-100);
+
+      @include mobile {
+        justify-content: center;
+      }
+
+      &-list {
+        @include flex-align-center;
+        gap: 32px;
+      }
+
+      &-icon {
+        display: block;
+        width: 32px;
+        height: 32px;
+
+        & svg path {
+          transition:
+            opacity var(--transition),
+            fill var(--transition);
+        }
+
+        &:hover svg {
+          path:first-child {
+            fill: var(--neutral-color-150);
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    &-written {
+      margin-bottom: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--neutral-color-150);
+    }
+
+    &-name {
+      display: block;
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 1.31;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+
+      @include mobile {
+        margin-bottom: 8px;
+      }
+    }
+
+    &-professions {
+      margin-bottom: 16px;
+      font-weight: 500;
+      line-height: 1.62;
+      color: var(--neutral-color-150);
+
+      @include mobile {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-text {
+      max-width: 650px;
+      font-weight: 400;
+      line-height: 1.78;
+      color: var(--neutral-color-100);
+    }
+  }
+}
