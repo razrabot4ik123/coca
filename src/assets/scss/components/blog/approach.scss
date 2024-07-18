@@ -81,6 +81,14 @@
           transition:
             opacity var(--transition),
             fill var(--transition);
+
+          &:first-child {
+            fill: var(--neutral-color-100);
+          }
+
+          &:not(:first-child) {
+            fill: var(--neutral-color-100);
+          }
         }
 
         &:hover svg {
