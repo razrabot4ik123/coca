@@ -1,0 +1,36 @@
+.quote {
+  &__container {
+    @include flex-justify-between-align-center;
+    gap: 60px 15px;
+    border-top: 1px solid var(--neutral-color-30);
+    border-bottom: 1px solid var(--neutral-color-30);
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include tablet {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    @include mobile {
+      gap: 30px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__title {
+    max-width: 480px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+  }
+
+  &__descr {
+    max-width: 472px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--neutral-color-100);
+  }
+}

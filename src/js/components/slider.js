@@ -84,7 +84,6 @@ export const useTestimonialsSlider = () => {
     modules: [Navigation, EffectFade],
     slidesPerView: 1,
     spaceBetween: 24,
-    loop: true,
     effect: 'fade',
     fadeEffect: {
       crossFade: true,

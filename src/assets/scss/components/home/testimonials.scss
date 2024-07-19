@@ -134,30 +134,34 @@
 
   &__btn {
     @include flex-all-center;
-    border: 1px solid var(--neutral-color-40);
+    border: 1px solid var(--btns-color-border);
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    transition:
-      background-color var(--transition),
-      border-color var(--transition);
+    background-color: var(--neutral-color-100);
+    transition: var(--transition);
+
+    & svg path {
+      fill: var(--neutral-color-10);
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
 
     @include small-mobile {
       width: 40px;
       height: 40px;
     }
+  }
+}
 
-    & svg path {
-      transition: fill var(--transition);
-    }
+.swiper-button-disabled {
+  border-color: var(--neutral-color-40);
+  background-color: var(--btns-color-bg-disabled);
+  pointer-events: none;
 
-    &:hover {
-      border-color: var(--neutral-color-100);
-      background-color: var(--neutral-color-100);
-
-      & svg path {
-        fill: var(--neutral-color-10);
-      }
-    }
+  & svg path {
+    fill: var(--btns-color-path-disabled);
   }
 }

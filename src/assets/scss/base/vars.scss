@@ -32,6 +32,11 @@
   // bg colors reverse
   --black-bg-color-reverse: #18181d;
 
+  // btns colors
+  --btns-color-border: #1d1e25;
+  --btns-color-bg-disabled: #fff;
+  --btns-color-path-disabled: #ced1d8;
+
   // container
   --container-padding: 15px;
   --container-width: 1200px;
@@ -74,7 +79,12 @@
 
   // bg colors
   --black-bg-color: #18181d;
-  
+
   // bg colors reverse
   --black-bg-color-reverse: #1d1e25;
+
+  // btns colors
+  --btns-color-border: #ced1d8;
+  --btns-color-bg-disabled: #ced1d8;
+  --btns-color-path-disabled: #1d1e25;
 }
