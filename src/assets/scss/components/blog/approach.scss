@@ -70,6 +70,10 @@
       &-list {
         @include flex-align-center;
         gap: 32px;
+
+        @include mobile {
+          gap: 16px;
+        }
       }
 
       &-icon {

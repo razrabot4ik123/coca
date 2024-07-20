@@ -1,0 +1,148 @@
+.team {
+  padding: 160px 0;
+
+  @include small-tablet {
+    padding: 80px 0;
+  }
+
+  @include small-mobile {
+    padding: 60px 0;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    max-width: 675px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include tablet {
+      max-width: none;
+      text-align: center;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 80px;
+    max-width: 534px;
+    font-weight: 500;
+    line-height: 1.78;
+    color: var(--neutral-color-150);
+
+    @include tablet {
+      max-width: none;
+      text-align: center;
+    }
+
+    @include small-tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__people {
+    margin-bottom: 100px;
+
+    @include small-tablet {
+      margin-bottom: 60px;
+    }
+
+    &-item {
+      max-width: 379px;
+    }
+
+    &-wrapper {
+      @include flex-justify-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    &-img {
+      margin-bottom: 16px;
+    }
+
+    &-name {
+      display: inline-block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--neutral-color-100);
+    }
+
+    &-professions {
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--neutral-color-150);
+    }
+
+    &-socials {
+      display: flex;
+      gap: 8px;
+
+      &-link {
+        display: block;
+        width: 32px;
+        height: 32px;
+
+        & svg path {
+          transition: opacity var(--transition);
+
+          &:first-child {
+            fill: var(--neutral-color-100);
+          }
+
+          &:not(:first-child) {
+            fill: var(--neutral-color-100);
+          }
+        }
+
+        &:hover svg {
+          path:first-child {
+            opacity: 0.3;
+          }
+        }
+      }
+    }
+  }
+
+  &__quote {
+    @include flex-justify-between-align-center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    @include mini-desktop {
+      justify-content: center;
+      text-align: center;
+    }
+
+    &-title {
+      max-width: 626px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+    }
+
+    &-info {
+      max-width: 506px;
+    }
+
+    &-descr {
+      margin-bottom: 24px;
+      font-weight: 500;
+      line-height: 1.78;
+      color: var(--neutral-color-150);
+    }
+
+    &-link {
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--neutral-color-100);
+      transition: opacity var(--transition);
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

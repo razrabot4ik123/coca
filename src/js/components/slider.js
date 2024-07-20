@@ -115,9 +115,32 @@ export const useAboutHeroSlider = () => {
         slidesPerView: 1.4,
         centeredSlides: true,
       },
+      381: {
+        slidesPerView: 1.2,
+      },
     },
-    381: {
-      slidesPerView: 1.2,
+  });
+};
+
+export const useAboutTeamSlider = () => {
+  new Swiper('.team__people', {
+    slidesPerView: 'auto',
+    spaceBetween: 18,
+    loop: true,
+    centeredSlides: true,
+
+    breakpoints: {
+      1201: {
+        slidesPerView: 3,
+        centeredSlides: false,
+      },
+      993: {
+        slidesPerView: 2.5,
+        spaceBetween: 32,
+      },
+      769: {
+        slidesPerView: 2,
+      },
     },
   });
 };
