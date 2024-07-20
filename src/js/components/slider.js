@@ -29,12 +29,12 @@ export const usePartnersSlider = () => {
         disableOnInteraction: false,
       },
       breakpoints: {
-        651: {
-          slidesPerView: 3,
-        },
         451: {
           slidesPerView: 2,
           spaceBetween: 30,
+        },
+        651: {
+          slidesPerView: 3,
         },
       },
     });
@@ -103,20 +103,20 @@ export const useAboutHeroSlider = () => {
     centeredSlides: false,
 
     breakpoints: {
-      993: {
-        slidesPerView: 2.3,
-        spaceBetween: 32,
-      },
-      769: {
-        slidesPerView: 2,
-        centeredSlides: false,
+      381: {
+        slidesPerView: 1.2,
       },
       577: {
         slidesPerView: 1.4,
         centeredSlides: true,
       },
-      381: {
-        slidesPerView: 1.2,
+      769: {
+        slidesPerView: 2,
+        centeredSlides: false,
+      },
+      993: {
+        slidesPerView: 2.3,
+        spaceBetween: 32,
       },
     },
   });
@@ -130,17 +130,24 @@ export const useAboutTeamSlider = () => {
     centeredSlides: true,
 
     breakpoints: {
-      1201: {
-        slidesPerView: 3,
-        centeredSlides: false,
-      },
-      993: {
-        slidesPerView: 2.5,
-        spaceBetween: 32,
-      },
       769: {
         slidesPerView: 2,
       },
+      993: {
+        slidesPerView: 2.5,
+      },
+      1201: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+        centeredSlides: false,
+      },
     },
+  });
+};
+
+export const useOverviewHeroSlider = () => {
+  new Swiper('.hero__slider', {
+    spaceBetween: 32,
+    slidesPerView: 'auto',
   });
 };
