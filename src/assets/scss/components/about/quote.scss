@@ -17,6 +17,30 @@
       padding-top: 40px;
       padding-bottom: 40px;
     }
+
+    &::before {
+      top: -400px;
+
+      @include mini-desktop {
+        top: -200px;
+      }
+
+      @include mobile {
+        top: -100px;
+      }
+    }
+
+    &::after {
+      bottom: -500px;
+
+      @include mini-desktop {
+        bottom: -300px;
+      }
+
+      @include small-tablet {
+        bottom: -100px;
+      }
+    }
   }
 
   &__title {
