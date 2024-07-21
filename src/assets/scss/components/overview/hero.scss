@@ -5,6 +5,13 @@
     padding: 45px 0 68px;
   }
 
+  &__container {
+    &::after {
+      right: -300px;
+      bottom: 350px;
+    }
+  }
+
   &__title {
     margin-bottom: 53px;
     font-weight: 700;
