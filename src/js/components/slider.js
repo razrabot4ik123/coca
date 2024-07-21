@@ -172,3 +172,15 @@ export const useOverviewHeroSlider = () => {
     },
   });
 };
+
+export const useOverviewArticlesSlider = () => {
+  new Swiper('.articles__slider', {
+    modules: [Navigation],
+    spaceBetween: 32,
+    slidesPerView: 'auto',
+    navigation: {
+      nextEl: '.articles__btn--next',
+      prevEl: '.articles__btn--prev',
+    },
+  });
+};

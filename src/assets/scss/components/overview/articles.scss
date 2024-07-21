@@ -1,3 +1,139 @@
 .articles {
   padding: 160px 0;
+
+  @include mobile {
+    padding: 80px 0;
+  }
+
+  &__head {
+    @include flex-justify-between-align-center;
+    gap: 15px;
+    margin-bottom: 80px;
+
+    @include mobile {
+      flex-direction: column;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    &-left {
+      max-width: 435px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__descr {
+    font-weight: 500;
+    line-height: 1.78;
+    color: var(--neutral-color-150);
+  }
+
+  &__btns {
+    @include flex-align-center;
+    gap: 16px;
+  }
+
+  &__btn {
+    @include flex-all-center;
+    border: 1px solid var(--btns-color-border);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--neutral-color-100);
+    transition: var(--transition);
+
+    & svg path {
+      fill: var(--neutral-color-10);
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @include small-mobile {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__slider {
+    &-item {
+      max-width: 407px;
+
+      &--big {
+        max-width: 476px;
+      }
+    }
+
+    &-img {
+      margin-bottom: 24px;
+
+      @include mobile {
+        margin-bottom: 14px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 1.31;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+
+      @include mobile {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-descr {
+      margin-bottom: 24px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 178%;
+      color: #7e8492;
+
+      @include mobile {
+        margin-bottom: 14px;
+      }
+    }
+
+    &-btn {
+      display: inline-block;
+      border: 1px solid var(--neutral-color-40);
+      padding: 16px 45px;
+      color: var(--neutral-color-100);
+      transition:
+        color var(--transition),
+        background-color var(--transition),
+        border-color var(--transition);
+
+      &:hover {
+        border-color: var(--neutral-color-100);
+        color: var(--neutral-color-10);
+        background-color: var(--neutral-color-100);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.swiper-button-disabled {
+  border-color: var(--neutral-color-40);
+  background-color: var(--btns-color-bg-disabled);
+  pointer-events: none;
+
+  & svg path {
+    fill: var(--btns-color-path-disabled);
+  }
 }
