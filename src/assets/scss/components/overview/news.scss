@@ -16,22 +16,28 @@
     }
 
     @include small-tablet {
+      @include flex-column;
       gap: 59px;
-      grid-template-columns: 1fr;
+      align-items: center;
+
+      @include small-mobile {
+        gap: 39px;
+      }
     }
   }
 
   &__card {
     @include flex-column;
     gap: 24px;
+    max-width: 584px;
 
     @include small-tablet {
       align-items: center;
       text-align: center;
     }
 
-    @include mobile {
-      gap: 12px;
+    @include small-mobile {
+      gap: 16px;
     }
 
     &-img {
@@ -47,11 +53,9 @@
 
       @include small-tablet {
         order: 1;
-        max-width: 502px;
       }
 
       &--decor {
-        max-width: 442px;
         text-decoration: underline;
         text-decoration-skip-ink: none;
       }
@@ -69,10 +73,14 @@
     }
 
     &:last-child {
-      transform: translateY(-244px);
+      margin-top: -244px;
+
+      @include tablet {
+        margin-top: -204px;
+      }
 
       @include small-tablet {
-        transform: translateY(0);
+        margin-top: 0;
       }
     }
   }
