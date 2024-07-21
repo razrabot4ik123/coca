@@ -1,32 +1,66 @@
 .hero {
   padding: 95px 0 168px;
 
+  @include mobile {
+    padding: 45px 0 68px;
+  }
+
   &__title {
     margin-bottom: 53px;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
+
+    @include small-tablet {
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 33px;
+    }
   }
 
   &__descr {
-    margin-bottom: 138px;
+    margin-bottom: 128px;
     max-width: 745px;
+
+    @include small-tablet {
+      margin-bottom: 68px;
+    }
+
+    @include mobile {
+      margin-bottom: 48px;
+    }
   }
 
   &__tabs {
     &-list {
       @include flex-align-center;
       gap: 16px;
-      margin-bottom: 90px;
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+
+      @include tablet {
+        justify-content: center;
+      }
+
+      @include mobile {
+        margin-bottom: 40px;
+      }
     }
 
     &-link {
-      padding: 12px 14px;
+      display: block;
+      padding: 10px 14px;
       font-weight: 500;
       line-height: 1.5;
       color: var(--neutral-color-150);
       transition: color var(--transition);
+
+      @include small-mobile {
+        padding: 6px 8px;
+      }
 
       &:hover {
         color: var(--neutral-color-100);
@@ -45,23 +79,29 @@
     &-item {
       width: auto;
       max-width: 515px;
-
-      &--small {
-        max-width: 405px;
-      }
     }
 
     &-img {
       margin-bottom: 16px;
+
+      @include small-mobile {
+        margin-bottom: 8px;
+      }
     }
 
     &-head {
       @include flex-justify-between-align-center;
-      gap: 16px;
+      gap: 8px 16px;
       margin-bottom: 24px;
       font-weight: 400;
       line-height: 1.5;
       color: var(--neutral-color-150);
+
+      @include small-mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 12px;
+      }
     }
 
     &-title {
@@ -71,6 +111,10 @@
       line-height: 1.25;
       letter-spacing: -0.03em;
       color: var(--neutral-color-100);
+
+      @include small-mobile {
+        margin-bottom: 8px;
+      }
     }
 
     &-text {
@@ -79,6 +123,14 @@
       font-size: 20px;
       line-height: 1.5;
       color: var(--neutral-color-150);
+
+      @include mobile {
+        font-size: 18px;
+      }
+
+      @include small-mobile {
+        font-size: 16px;
+      }
     }
   }
 }

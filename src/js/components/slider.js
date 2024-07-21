@@ -147,7 +147,26 @@ export const useAboutTeamSlider = () => {
 
 export const useOverviewHeroSlider = () => {
   new Swiper('.hero__slider', {
-    spaceBetween: 32,
-    slidesPerView: 'auto',
+    slidesPerView: 1,
+    centeredSlides: false,
+    spaceBetween: 16,
+    initialSlide: 1,
+
+    breakpoints: {
+      1201: {
+        centeredSlides: false,
+        initialSlide: 0,
+        spaceBetween: 32,
+      },
+      993: {
+        initialSlide: 1,
+        spaceBetween: 32,
+        centeredSlides: true,
+      },
+      577: {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+      },
+    },
   });
 };
