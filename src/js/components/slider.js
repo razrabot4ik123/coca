@@ -154,11 +154,13 @@ export const useOverviewHeroSlider = () => {
 
     breakpoints: {
       1201: {
+        slidesPerView: 'auto',
         centeredSlides: false,
         initialSlide: 0,
         spaceBetween: 32,
       },
       993: {
+        slidesPerView: 'auto',
         initialSlide: 1,
         spaceBetween: 32,
         centeredSlides: true,
