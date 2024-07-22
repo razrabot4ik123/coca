@@ -94,6 +94,37 @@ export const useMap = () => {
       window.layerLight = layerLight;
     }
 
+    function removeLayers() {
+      if (window.layerDark) {
+        map.removeChild(window.layerDark);
+        window.layerDark = null;
+      }
+      if (window.layerLight) {
+        map.removeChild(window.layerLight);
+        window.layerLight = null;
+      }
+    }
+
+    function removeLayers() {
+      if (window.layerDark) {
+        map.removeChild(window.layerDark);
+        window.layerDark = null;
+      }
+      if (window.layerLight) {
+        map.removeChild(window.layerLight);
+        window.layerLight = null;
+      }
+    }
+
+    function switchMapTheme(newTheme) {
+      removeLayers();
+      if (newTheme === 'dark') {
+        layerDark();
+      } else {
+        layerLight();
+      }
+    }
+
     if (theme === 'dark') {
       layerDark();
     } else {
@@ -102,6 +133,9 @@ export const useMap = () => {
 
     window.YMapDefaultSchemeLayer = YMapDefaultSchemeLayer;
     window.map = map;
+    window.removeLayers = removeLayers;
+    window.switchMapTheme = switchMapTheme;
   }
+
   initMap();
 };

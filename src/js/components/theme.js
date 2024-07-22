@@ -10,9 +10,11 @@ export const useTheme = () => {
   if (theme === 'dark') {
     themeSwitcher.checked = true;
     themeSwitcherText.textContent = 'Dark';
+    changeFavicon('./assets/icons/c-favicon-icon--dark.svg');
   } else {
     themeSwitcher.checked = false;
     themeSwitcherText.textContent = 'Light';
+    changeFavicon('./assets/icons/c-favicon-icon--light.svg');
   }
 
   themeSwitcher.addEventListener('click', () => {
@@ -20,10 +22,23 @@ export const useTheme = () => {
       themeTargetDataset.theme = 'dark';
       themeSwitcherText.textContent = 'Dark';
       localStorage.setItem('theme', 'dark');
+      changeFavicon('./assets/icons/c-favicon-icon--dark.svg');
+      if (window.switchMapTheme) {
+        window.switchMapTheme('dark');
+      }
     } else {
       themeTargetDataset.theme = 'light';
       themeSwitcherText.textContent = 'Light';
       localStorage.setItem('theme', 'light');
+      changeFavicon('./assets/icons/c-favicon-icon--light.svg');
+      if (window.switchMapTheme) {
+        window.switchMapTheme('light');
+      }
     }
   });
+
+  function changeFavicon(newFavicon) {
+    let link = document.getElementById('favicon');
+    link.href = newFavicon;
+  }
 };
