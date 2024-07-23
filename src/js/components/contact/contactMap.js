@@ -20,6 +20,25 @@ export const useMap = () => {
     const featuresLayer = new YMapDefaultFeaturesLayer();
     map.addChild(featuresLayer);
 
+    function addCustomMarker() {
+      const content = document.createElement('section');
+      const marker = new ymaps3.YMapMarker(
+        {
+          coordinates: [130, -25],
+          draggable: false,
+        },
+        content,
+      );
+      map.addChild(marker);
+      content.innerHTML = `<div class="hero__map-marker">
+      <div class="hero__map-marker-info">
+        <h4 class="hero__map-marker-title">Yogja, INA</h4>
+        <p class="hero__map-marker-location">100 Smith Street Collingwood VIC 3066 AU</p>
+      </div>
+      <img src="./assets/icons/yandex-map-marker-icon.svg" width="54" height="54" alt="marker in map" />
+      </div>`;
+    }
+
     function layerDark() {
       const layerDark = new YMapDefaultSchemeLayer({
         customization: [
@@ -105,17 +124,6 @@ export const useMap = () => {
       }
     }
 
-    function removeLayers() {
-      if (window.layerDark) {
-        map.removeChild(window.layerDark);
-        window.layerDark = null;
-      }
-      if (window.layerLight) {
-        map.removeChild(window.layerLight);
-        window.layerLight = null;
-      }
-    }
-
     function switchMapTheme(newTheme) {
       removeLayers();
       if (newTheme === 'dark') {
@@ -130,6 +138,8 @@ export const useMap = () => {
     } else {
       layerLight();
     }
+
+    addCustomMarker();
 
     window.YMapDefaultSchemeLayer = YMapDefaultSchemeLayer;
     window.map = map;

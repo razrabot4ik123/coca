@@ -47,6 +47,38 @@
     @include small-tablet {
       height: 345px;
     }
+
+    &-marker {
+      @include flex-column;
+      gap: 9px;
+      align-items: center;
+      justify-content: center;
+      transform: translate(-50%, -100%);
+
+      &-info {
+        border-radius: 8px;
+        padding: 12px 16px;
+        width: 180px;
+        height: 88px;
+        box-shadow: 0 16px 24px 0 #1e1e1e14;
+        background-color: #fff;
+      }
+
+      &-title {
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.43;
+        color: var(--neutral-color-90);
+      }
+
+      &-location {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.5;
+        color: var(--neutral-color-150);
+      }
+    }
   }
 
   &__contacts {
