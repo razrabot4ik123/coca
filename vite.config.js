@@ -30,10 +30,10 @@ export default defineConfig({
     ViteMinifyPlugin(),
     ViteImageOptimizer({
       png: {
-        quality: 80,
+        quality: 90,
       },
       jpg: {
-        quality: 80,
+        quality: 90,
       },
     }),
   ],
