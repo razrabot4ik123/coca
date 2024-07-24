@@ -1,5 +1,5 @@
 import 'swiper/css';
-import '../assets/scss/overview.scss';
+import '/scss/overview.scss';
 
 // components
 import { useTheme } from './components/theme.js';

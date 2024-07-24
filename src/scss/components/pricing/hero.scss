@@ -250,7 +250,7 @@
         flex-shrink: 0;
         width: 20px;
         height: 20px;
-        background: url('../icons/pricing-tick-icon.svg');
+        background: url('../assets/icons/pricing-tick-icon.svg');
       }
 
       &:not(:last-child) {
@@ -266,7 +266,7 @@
         color: var(--neutral-color-150);
 
         &::before {
-          background: url('../icons/pricing-tick-inaccess-icon.svg');
+          background: url('../assets/icons/pricing-tick-inaccess-icon.svg');
         }
       }
     }

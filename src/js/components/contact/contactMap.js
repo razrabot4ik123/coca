@@ -35,7 +35,7 @@ export const useMap = () => {
         <h4 class="hero__map-marker-title">Yogja, INA</h4>
         <p class="hero__map-marker-location">100 Smith Street Collingwood VIC 3066 AU</p>
       </div>
-      <img src="./assets/icons/yandex-map-marker-icon.svg" width="54" height="54" alt="marker in map" />
+      <img class="hero__map-marker-icon" src="./assets/icons/yandex-map-marker-icon.svg" width="54" height="54" alt="marker in map" />
       </div>`;
     }
 

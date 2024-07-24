@@ -1,7 +1,12 @@
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
-import '../assets/scss/main.scss';
+import '/scss/main.scss';
+
+// icons
+import '/assets/icons/c-favicon-icon--dark.svg';
+import '/assets/icons/c-favicon-icon--light.svg';
+import '/assets/icons/yandex-map-marker-icon.svg';
 
 // components
 import { useTheme } from './components/theme.js';

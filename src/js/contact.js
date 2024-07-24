@@ -1,6 +1,6 @@
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import '../assets/scss/contact.scss';
+import '/scss/contact.scss';
 
 // components
 import { useTheme } from './components/theme.js';

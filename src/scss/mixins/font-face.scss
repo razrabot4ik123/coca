@@ -2,8 +2,8 @@
   @font-face {
     src:
       local($font-family),
-      url('../fonts/#{$url}.woff2') format('woff2'),
-      url('../fonts/#{$url}.woff') format('woff');
+      url('../assets/fonts/#{$url}.woff2') format('woff2'),
+      url('../assets/fonts/#{$url}.woff') format('woff');
     font-family: $font-family;
     font-weight: $weight;
     font-style: $font-style;
